@@ -1000,3 +1000,78 @@ img { max-width: 100%; display: block; }
         font-size: 0.8rem;
     }
 }
+
+/* ==============================
+   Projetos (added for React build)
+   ============================== */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.projeto-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 24px;
+    padding: 2rem 1.8rem;
+    box-shadow: 0 10px 30px rgba(124, 92, 191, 0.08);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.projeto-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(124, 92, 191, 0.18);
+    border-color: var(--lavender-light);
+}
+
+.projeto-emoji {
+    font-size: 2.4rem;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: var(--gradient-soft);
+    margin-bottom: 1.2rem;
+}
+
+.projeto-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    color: var(--gray-800);
+    margin-bottom: 0.7rem;
+}
+
+.projeto-card p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.projeto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.projeto-tag {
+    background: var(--gradient-soft);
+    color: var(--lavender-dark);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid rgba(124, 92, 191, 0.2);
+}
