@@ -1000,3 +1000,33 @@ img { max-width: 100%; display: block; }
         font-size: 0.8rem;
     }
 }
+
+/* Projetos main/HTML */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.projeto-card {
+    background: var(--white, #fff);
+    border: 1px solid var(--border, #eee);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+.projeto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+.projeto-emoji { font-size: 2.5rem; margin-bottom: 1rem; }
+.projeto-titulo { font-family: 'Lora', serif; font-size: 1.25rem; margin-bottom: 0.6rem; }
+.projeto-descricao { color: #6b6b6b; font-size: 0.95rem; margin-bottom: 1.2rem; }
+.projeto-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.projeto-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    background: var(--gradient-soft, #f5f0f8);
+    border-radius: 100px;
+    font-weight: 500;
+}
